@@ -1,0 +1,15 @@
+{% extends 'internet_shop/base.html' %}
+
+{% block title %}{{ client.name }}'s Orders{% endblock %}
+
+{% block content %}
+    <h2>все заказы клиента: {{ client.name }}</h2>
+    {% for order in orders %}
+        <h1>order</h1>
+        <p>{{ order.create_at }}</p>
+        <p>{{ order.total_price }}</p>
+                <h3>Goods</h3>
+                <p>{{ goods.pop }}</p>
+
+    {% endfor %}
+{% endblock %}
